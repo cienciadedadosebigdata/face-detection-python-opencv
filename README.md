@@ -4,9 +4,8 @@ This is a Face Recognition System
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+This has c++ and python programs that use OpenCV for face recognition
+Python uses Python 2.7
 
 ### How do I get set up? ###
 
