@@ -3,40 +3,22 @@
 
 import cv2                  #   Importing the opencv
 import numpy as np          #   Import Numarical Python
+import NameFind
 
 
 #   import the Haar cascades for face and eye ditection
 
-face_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_eye.xml')
-spec_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_eye_tree_eyeglasses.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
+eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+spec_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
 
 recognise = cv2.face.createEigenFaceRecognizer(num_components = 50, threshold = 15000)  # creating EIGEN FACE RECOGNISER 
 recognise.load("Recogniser/trainingDataEigan.xml")                                   #   Load the training data from the trainer to recognise the faces
 
 
-def convertName(ID, conf):
-    if ID == 1:
-        ID = 'Spike'
-    elif ID == 2:
-        ID = 'Sera'
-    elif ID == 3:
-        ID = 'Linda'
-    elif ID == 6:
-        ID = 'Spike'
-    elif ID == 7:
-        ID = 'DiCaprio'
-    else:
-        ID = 'Unknown'
-        conf = 0
 
-    NAME = ("ID: " + str(ID) + "  CONFIDANCE: " + str(round(conf)))
-    return NAME
-    
-
-
-cap = cv2.VideoCapture(0)                                                       #   Camera object
+cap = cv2.VideoCapture(1)                                                       #   Camera object
 cap.set(6, 10)                                                                  #   Set the frame rate to 20
 
 ID = 0
@@ -61,7 +43,7 @@ while (True):
         for (ex, ey, ew, eh) in eyes:
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, 255, 255), 1)     #   Draw a rectangle arround the face
             ID, conf = recognise.predict(roi_gray)                    #   Determine the ID of the photo
-        NAME = convertName(ID ,conf)
+        NAME = NameFind.ID2Name(ID, conf)
         
 
      #  ------------------------------------    THE POSITION OF THE ID BOX           
@@ -82,7 +64,7 @@ while (True):
         cv2.imshow('CAPTURED FACE', roi_gray)                   
                    
     
-    cv2.imshow('Face Recognition System', gray)                                 #   Show the video  
+    cv2.imshow('EigenFace Face Recognition System', gray)                                 #   Show the video  
     
     if cv2.waitKey(1) & 0xFF == ord('q'):                                       #   Quit if the key is Q
         break

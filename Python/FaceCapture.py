@@ -4,23 +4,21 @@
 
 import cv2                  #   Importing the opencv
 import numpy as np          #   Import Numarical Python
+import NameFind
 
 
 #   import the Haar cascades for face ditection
 
-face_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_eye.xml')
-spec_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_eye_tree_eyeglasses.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
+eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+spec_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
 
-ID = input ('Enter the ID')
-NME = raw_input('Enter the Name ')
-
-Info = open("Names.txt", a
+ID = NameFind.AddName()
 
 Count = 0                                    
 
-cap = cv2.VideoCapture(0)   #   Camera object
+cap = cv2.VideoCapture(1)   #   Camera object
 
 while (Count < 100):
     ret, img = cap.read()

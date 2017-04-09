@@ -1,13 +1,16 @@
 
-ID = 1
 
-def FileRad():
-    Info = open("Names.txt", "a")
-    while (ID != 0):
-        ID = input ('Enter the ID ')
-        NME = raw_input('Enter the Name ')
-        Info.write(str(ID) + "," + NME + "\n")
+def AddName():
+    Name = raw_input('Enter Your Name ')
+    Info = open("Names.txt", "r+")    
+    Info.write(str((sum(1 for line in Info))+1) + "," + Name + "\n")
+    print ("Name Stored...")
     Info.close()
+
+        #ID = input ('Enter the ID ')
+        #NME = 
+
+AddName()
 
 #       ----------- FUNCTION TO READ THE FILE AND ADD THE NAMES AND IDs IN TO TUPLES
 def FileRead():
@@ -23,7 +26,6 @@ def FileRead():
        
     return ID, NAME
         
-IDs, Names = FileRead()
 
 #       ------- FUNCTION TO FIND THE NAME
 
@@ -32,7 +34,6 @@ def ID2Name(ID, conf ):
 
     return Name
 
-print (ID2Name(1, 2002))
 
 
 
