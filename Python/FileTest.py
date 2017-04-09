@@ -9,7 +9,7 @@ def FileRad():
         Info.write(str(ID) + "," + NME + "\n")
     Info.close()
 
-
+#       ----------- FUNCTION TO READ THE FILE AND ADD THE NAMES AND IDs IN TO TUPLES
 def FileRead():
     Info = open("Names.txt", "r")
     ID = []
@@ -19,14 +19,22 @@ def FileRead():
         if Line == '':
             break
         ID.append(int(Line.split(",") [0]))
-        NAME.append (Line.split(",")[1]) 
+        NAME.append (Line.split(",")[1].rstrip())
+       
     return ID, NAME
         
 IDs, Names = FileRead()
 
+#       ------- FUNCTION TO FIND THE NAME
 
-print(IDs)
-IDs
+def ID2Name(ID, conf ):
+    Name = "Name: " + Names[IDs.index(ID)] + " Conf: " + str(round(conf))
+
+    return Name
+
+print (ID2Name(1, 2002))
+
+
 
 
 

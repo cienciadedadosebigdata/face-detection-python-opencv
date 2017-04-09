@@ -12,9 +12,9 @@ spec_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 recognise = cv2.face.createLBPHFaceRecognizer()                                 #   LBPH Face recogniser object
 recognise.load("Recogniser/trainingData.xml")                                   #   Load the training data from the trainer to recognise the faces
 
-Info = open("Names.txt", "r")
-
-def FindName(Id, conf, Info):
+#       ----------- FUNCTION TO READ THE FILE AND ADD THE NAMES AND IDs IN TO TUPLES
+def FileRead():
+    Info = open("Names.txt", "r")
     ID = []
     NAME = []
     while (True):
@@ -22,9 +22,17 @@ def FindName(Id, conf, Info):
         if Line == '':
             break
         ID.append(int(Line.split(",") [0]))
-        NAME.append (Line.split(",")[1])
-    
-    Name = "Names: " + str(NAME[ID.index(Id)]) + str(round(conf))     
+        NAME.append (Line.split(",")[1].rstrip())
+       
+    return ID, NAME
+        
+IDs, Names = FileRead()
+
+#       ------- FUNCTION TO FIND THE NAME
+
+def ID2Name(ID, conf ):
+    Name = "Name: " + Names[IDs.index(ID)] + " Conf: " + str(round(conf))
+
     return Name
     
 
@@ -51,7 +59,7 @@ while (True):
             ID, conf = recognise.predict(roi_gray)                    #   Determine the ID of the photo
             
             cv2.rectangle(gray, (x, y-30), (x + w, y-1), (0,0,0), -2)           #   Draw a Black Rectangle over the face frame
-            cv2.putText(gray, str(ID), (x, y - 10), cv2.FONT_HERSHEY_PLAIN, 1.2, (255, 255, 255))    #   Print the name of the ID
+            cv2.putText(gray, ID2Name(ID, conf), (x, y - 10), cv2.FONT_HERSHEY_PLAIN, 1.2, (255, 255, 255))    #   Print the name of the ID
                
     
     cv2.imshow('Face Recognition System', gray)                                 #   Show the video  
