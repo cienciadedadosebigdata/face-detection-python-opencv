@@ -19,13 +19,14 @@ def FileRead():
         if Line == '':
             break
         ID.append(int(Line.split(",") [0]))
-        NAME.append (Line.split(",")[1].split('\')[0]) 
+        NAME.append (Line.split(",")[1]) 
     return ID, NAME
         
 IDs, Names = FileRead()
 
 
 print(IDs)
+IDs
 
 
 

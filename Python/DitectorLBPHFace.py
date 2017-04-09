@@ -4,29 +4,32 @@ import numpy as np          #   Import Numarical Python
 
 #   import the Haar cascades for face and eye ditection
 
-face_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_eye.xml')
-spec_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_eye_tree_eyeglasses.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
+eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+spec_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
 
 recognise = cv2.face.createLBPHFaceRecognizer()                                 #   LBPH Face recogniser object
 recognise.load("Recogniser/trainingData.xml")                                   #   Load the training data from the trainer to recognise the faces
 
+Info = open("Names.txt", "r")
 
-def convertName(ID):
-    if ID == 1:
-        ID = 'Spike'
-    elif ID == 2:
-        ID = 'Sera'
-    elif ID == 3:
-        ID = 'Linda'
-    else:
-        ID == 'Unknown'
-    return ID
+def FindName(Id, conf, Info):
+    ID = []
+    NAME = []
+    while (True):
+        Line = Info.readline()
+        if Line == '':
+            break
+        ID.append(int(Line.split(",") [0]))
+        NAME.append (Line.split(",")[1])
+    
+    Name = "Names: " + str(NAME[ID.index(Id)]) + str(round(conf))     
+    return Name
     
 
 
-cap = cv2.VideoCapture(0)                                                       #   Camera object
+cap = cv2.VideoCapture(1)                                                       #   Camera object
 cap.set(6, 10)                                                                  #   Set the frame rate to 20
 
 ID = 0
@@ -46,9 +49,9 @@ while (True):
         for (ex, ey, ew, eh) in eyes:
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, 255, 255), 1)     #   Draw a rectangle arround the face
             ID, conf = recognise.predict(roi_gray)                    #   Determine the ID of the photo
-            ID = convertName(ID)
+            
             cv2.rectangle(gray, (x, y-30), (x + w, y-1), (0,0,0), -2)           #   Draw a Black Rectangle over the face frame
-            cv2.putText(gray, (str(ID) + ' ' + str(round(conf))), (x, y - 10), cv2.FONT_HERSHEY_PLAIN, 1.2, (255, 255, 255))    #   Print the name of the ID
+            cv2.putText(gray, str(ID), (x, y - 10), cv2.FONT_HERSHEY_PLAIN, 1.2, (255, 255, 255))    #   Print the name of the ID
                
     
     cv2.imshow('Face Recognition System', gray)                                 #   Show the video  

@@ -4,9 +4,9 @@ import numpy as np          #   Import Numarical Python
 
 #   import the Haar cascades for face ditection
 
-face_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_eye.xml')
-spec_cascade = cv2.CascadeClassifier('C:\OpenCV_NEW\install\etc\haarcascades\haarcascade_eye_tree_eyeglasses.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
+eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+spec_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
 
 
