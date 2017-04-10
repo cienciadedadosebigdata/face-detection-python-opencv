@@ -20,12 +20,13 @@ recognise.load("Recogniser/trainingDataFisher.xml")                             
 
     
 
-cap = cv2.VideoCapture(1)                                                       #   Camera object
+cap = cv2.VideoCapture(0)                                                       #   Camera object
 
 ID = 0
 
 while (True):
     ret, img = cap.read()                                                       #   Read the camera object
+    print img.shape
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)                                #   Convert the Camera to gray
      
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)                         #   Detect the faces and store the positions

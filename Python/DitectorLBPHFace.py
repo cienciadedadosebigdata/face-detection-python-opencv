@@ -20,7 +20,7 @@ recognise.load("Recogniser/trainingDataLBPH.xml")                               
     
 # -------------------------     START THE VIDEO FEED ------------------------------------------
 
-cap = cv2.VideoCapture(1)                                                       #   Camera object
+cap = cv2.VideoCapture(0)                                                       #   Camera object
 cap.set(6, 10)                                                                  #   Set the frame rate to 20
 
 ID = 0

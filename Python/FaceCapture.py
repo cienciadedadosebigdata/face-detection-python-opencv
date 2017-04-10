@@ -18,7 +18,7 @@ ID = NameFind.AddName()
 
 Count = 0                                    
 
-cap = cv2.VideoCapture(1)   #   Camera object
+cap = cv2.VideoCapture(0)   #   Camera object
 
 while (Count < 100):
     ret, img = cap.read()
