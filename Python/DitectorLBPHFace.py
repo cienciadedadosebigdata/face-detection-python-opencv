@@ -10,7 +10,6 @@ import NameFind
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
-spec_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
 
 recognise = cv2.face.createLBPHFaceRecognizer()                                 #   LBPH Face recogniser object
@@ -32,7 +31,6 @@ while (True):
         #   Eyes should be inside the face.
         roi_gray = gray[y: y+h, x: x+w]                                         #   The Face is isolated and cropped
         eyes = eye_cascade.detectMultiScale(roi_gray)
-        glass = spec_cascade.detectMultiScale(roi_gray)
         for (ex, ey, ew, eh) in eyes:
             ID, conf = recognise.predict(roi_gray)                    #   Determine the ID of the photo
             NAME = NameFind.ID2Name(ID, conf)

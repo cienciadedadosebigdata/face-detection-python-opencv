@@ -65,11 +65,12 @@ def DispID(x, y, w, h, NAME, Image):
     cv2.line(Image, (x+((w/5)*4), y+h), (x + w, y + h), WHITE, 1)
     cv2.line(Image, (x+w, (y+(h/5*4))), (x+w, y+h), WHITE, 1)
     
+                  
     cv2.rectangle(Image, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), (0,0,0), -2)           #   Draw a Black Rectangle over the face frame
     cv2.rectangle(Image, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), WHITE, 1) 
-    cv2.putText(Image, NAME, (Name_X_pos, Name_y_pos - 10), cv2.FONT_HERSHEY_DUPLEX, .4, (255, 255, 255))                         #   Print the name of the ID
+    cv2.putText(Image, NAME, (Name_X_pos, Name_y_pos - 10), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)                         #   Print the name of the ID
 
-
+# ---------------     SECOND ID BOX      ----------------------
 def DispID2(x, y, w, h, NAME, Image):
 
 #  --------------------------------- THE POSITION OF THE ID BOX  -------------------------------------------------        
@@ -87,4 +88,4 @@ def DispID2(x, y, w, h, NAME, Image):
  #  ------------------------------------    THE DRAWING OF THE BOX AND ID   --------------------------------------
     cv2.rectangle(Image, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), (0,0,0), -2)           #   Draw a Black Rectangle over the face frame
     cv2.rectangle(Image, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), WHITE, 1) 
-    cv2.putText(Image, NAME, (Name_X_pos, Name_y_pos - 10), cv2.FONT_HERSHEY_DUPLEX, .4, (255, 255, 255))                         #   Print the name of the ID
+    cv2.putText(Image, NAME, (Name_X_pos, Name_y_pos - 10), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)                         #   Print the name of the ID

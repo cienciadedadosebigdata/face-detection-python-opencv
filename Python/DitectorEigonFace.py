@@ -10,11 +10,10 @@ import NameFind
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
-spec_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
 
 recognise = cv2.face.createEigenFaceRecognizer(num_components = 50, threshold = 15000)  # creating EIGEN FACE RECOGNISER 
-recognise.load("Recogniser/trainingDataEigan.xml")                                   #   Load the training data from the trainer to recognise the faces
+recognise.load("Recogniser/trainingDataEigan.xml")                                      #   Load the training data from the trainer to recognise the faces
 
 
 
@@ -32,39 +31,16 @@ while (True):
 
         #   -----------------------------------     BY CONFIRMING THE EYES ARE INSIDE THE FACE BETTER FACE RECOGNITION IS GAINED
         
-        roi_gray = cv2.resize((gray[y: y+h, x: x+w]), (110, 110))                                         #   The Face is isolated and cropped
-        
-        cv2.imshow('CAPTURED FACE', roi_gray)
-
-        
-        roi_color = img[y: y+h, x: x+w] 
+        roi_gray = cv2.resize((gray[y: y+h, x: x+w]), (110, 110))               #   The Face is isolated and cropped
         eyes = eye_cascade.detectMultiScale(roi_gray)
-        glass = spec_cascade.detectMultiScale(roi_gray)
         for (ex, ey, ew, eh) in eyes:
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, 255, 255), 1)     #   Draw a rectangle arround the face
-            ID, conf = recognise.predict(roi_gray)                    #   Determine the ID of the photo
+            ID, conf = recognise.predict(roi_gray)                              #   Determine the ID of the photo
             NAME = NameFind.ID2Name(ID, conf)
-            
-
-         #  ------------------------------------    THE POSITION OF THE ID BOX           
-            Name_y_pos = y - 10
-            Name_X_pos = x + w/2 - (len(NAME)*7/2)
-
-            if Name_X_pos < 0:
-                Name_X_pos = 0
-            elif (Name_X_pos +10 + (len(NAME) * 7) > gray.shape[1]):
-                  Name_X_pos= Name_X_pos - (Name_X_pos +10 + (len(NAME) * 7) - (gray.shape[1]))
-            if Name_y_pos < 0:
-                Name_y_pos = Name_y_pos = y + h + 10
-                  
-         #  ------------------------------------    THE DRAWING OF THE BOX AND ID   
-            cv2.rectangle(gray, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), (0,0,0), -2)           #   Draw a Black Rectangle over the face frame
-            cv2.rectangle(gray, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), (255, 255, 255), 1) 
-            cv2.putText(gray, NAME, (Name_X_pos, Name_y_pos - 10), cv2.FONT_HERSHEY_DUPLEX, .4, (255, 255, 255))    #   Print the name of the ID
-            cv2.imshow('CAPTURED FACE', roi_gray)                   
+            NameFind.DispID(x, y, w, h, NAME, gray)
                    
     
-    cv2.imshow('EigenFace Face Recognition System', gray)                                 #   Show the video  
+    cv2.imshow('EigenFace Face Recognition System', gray)                       #   Show the video  
     
     if cv2.waitKey(1) & 0xFF == ord('q'):                                       #   Quit if the key is Q
         break
