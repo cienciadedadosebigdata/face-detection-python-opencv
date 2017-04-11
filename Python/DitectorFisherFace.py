@@ -26,7 +26,6 @@ ID = 0
 
 while (True):
     ret, img = cap.read()                                                       #   Read the camera object
-    print img.shape
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)                                #   Convert the Camera to gray
      
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)                         #   Detect the faces and store the positions
@@ -40,27 +39,11 @@ while (True):
         eyes = eye_cascade.detectMultiScale(roi_gray)
         glass = spec_cascade.detectMultiScale(roi_gray)
         for (ex, ey, ew, eh) in eyes:
-            cv2.rectangle(gray, (x, y), (x + w, y + h), (255, 255, 255), 1)     #   Draw a rectangle arround the face
             ID, conf = recognise.predict(roi_gray)                              #   Determine the ID of the photo
             NAME = NameFind.ID2Name(ID ,conf)
             
+            NameFind.DispID(x, y, w, h, NAME, gray)
 
-         #  ------------------------------------    THE POSITION OF THE ID BOX           
-            Name_y_pos = y - 10
-            Name_X_pos = x + w/2 - (len(NAME)*7/2)
-
-            if Name_X_pos < 0:
-                Name_X_pos = 0
-            elif (Name_X_pos +10 + (len(NAME) * 7) > gray.shape[1]):
-                  Name_X_pos= Name_X_pos - (Name_X_pos +10 + (len(NAME) * 7) - (gray.shape[1]))
-            if Name_y_pos < 0:
-                Name_y_pos = Name_y_pos = y + h + 10
-                  
-         #  ------------------------------------    THE DRAWING OF THE BOX AND ID   
-            cv2.rectangle(gray, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), (0,0,0), -2)           #   Draw a Black Rectangle over the face frame
-            cv2.rectangle(gray, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), (255, 255, 255), 1) 
-            cv2.putText(gray, NAME, (Name_X_pos, Name_y_pos - 10), cv2.FONT_HERSHEY_DUPLEX, .4, (255, 255, 255))    #   Print the name of the ID
-            cv2.imshow('CAPTURED FACE', roi_gray)                   
 
     cv2.imshow('FisherFace Face Recognition System', gray)                                 #   Show the video  
     
