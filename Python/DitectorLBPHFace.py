@@ -36,7 +36,8 @@ while (True):
         for (ex, ey, ew, eh) in eyes:
             ID, conf = recognise.predict(roi_gray)                    #   Determine the ID of the photo
             NAME = NameFind.ID2Name(ID, conf)
-            NameFind.DispID(x, y, w, h, NAME, gray)    
+            NameFind.DispID(x, y, w, h, NAME, gray)
+                  
     cv2.imshow('LBPH Face Recognition System', gray)                                 #   Show the video  
     
     if cv2.waitKey(1) & 0xFF == ord('q'):                                       #   Quit if the key is Q
