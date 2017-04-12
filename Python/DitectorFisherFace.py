@@ -12,14 +12,14 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
 
-recognise = cv2.face.createFisherFaceRecognizer(num_components = 100, threshold = 1000)  # creating FISHER FACE RECOGNISER 
+recognise = cv2.face.createFisherFaceRecognizer(100, 1000)                           # creating FISHER FACE RECOGNISER 
 recognise.load("Recogniser/trainingDataFisher.xml")                                   #   Load the training data from the trainer to recognise the faces
 
 
 
     
 
-cap = cv2.VideoCapture("TestVid1.wmv")                                                       #   Camera object
+cap = cv2.VideoCapture(0)                                                       #   Camera object
 
 ID = 0
 

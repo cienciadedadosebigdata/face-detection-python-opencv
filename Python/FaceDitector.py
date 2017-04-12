@@ -5,6 +5,7 @@
 import cv2                  #   Importing the opencv
 import numpy as np          #   Import Numarical Python
 import NameFind
+WHITE = [255, 255, 255]
 
 
 

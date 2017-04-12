@@ -22,9 +22,9 @@ IDs, Names = FileRead()                                 #   Run the above Functi
 
 def ID2Name(ID, conf):
     if ID > 0:
-        NameString = "Name: " + Names[IDs.index(ID)] + " Confidence: " + (str(round(conf)) )                                #   Find the Name using the index of the ID
+        NameString = "Name: " + Names[IDs.index(ID)] + " Distance: " + (str(round(conf)) )                                #   Find the Name using the index of the ID
     else:
-        NameString = ("Name: Unknown Confidence: N/A   ")                                                                   #   Find the Name using the index of the ID
+        NameString = (" Face Not Recognised ")                                                                   #   Find the Name using the index of the ID
 
     return NameString
 
@@ -76,6 +76,27 @@ def DispID2(x, y, w, h, NAME, Image):
 #  --------------------------------- THE POSITION OF THE ID BOX  -------------------------------------------------        
 
     Name_y_pos = y - 40
+    Name_X_pos = x + w/2 - (len(NAME)*7/2)
+
+    if Name_X_pos < 0:
+        Name_X_pos = 0
+    elif (Name_X_pos +10 + (len(NAME) * 7) > Image.shape[1]):
+          Name_X_pos= Name_X_pos - (Name_X_pos +10 + (len(NAME) * 7) - (Image.shape[1]))
+    if Name_y_pos < 0:
+        Name_y_pos = Name_y_pos = y + h + 10
+          
+ #  ------------------------------------    THE DRAWING OF THE BOX AND ID   --------------------------------------
+    cv2.rectangle(Image, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), (0,0,0), -2)           #   Draw a Black Rectangle over the face frame
+    cv2.rectangle(Image, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), WHITE, 1) 
+    cv2.putText(Image, NAME, (Name_X_pos, Name_y_pos - 10), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)                         #   Print the name of the ID
+
+
+# ---------------     THIRD ID BOX      ----------------------
+def DispID3(x, y, w, h, NAME, Image):
+
+#  --------------------------------- THE POSITION OF THE ID BOX  -------------------------------------------------        
+
+    Name_y_pos = y - 70
     Name_X_pos = x + w/2 - (len(NAME)*7/2)
 
     if Name_X_pos < 0:

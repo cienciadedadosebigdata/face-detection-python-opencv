@@ -21,7 +21,7 @@ recognise.load("Recogniser/trainingDataLBPH.xml")                               
     
 # -------------------------     START THE VIDEO FEED ------------------------------------------
 
-img = cv2.imread('TestGroup.jpg')
+img = cv2.imread('Me2.jpg')
 
 
 #--------------

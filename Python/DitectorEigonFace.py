@@ -12,12 +12,12 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
 
-recognise = cv2.face.createEigenFaceRecognizer(num_components = 10, threshold = 10000)  # creating EIGEN FACE RECOGNISER 
+recognise = cv2.face.createEigenFaceRecognizer(10, 10000)  # creating EIGEN FACE RECOGNISER 
 recognise.load("Recogniser/trainingDataEigan.xml")                                      #   Load the training data from the trainer to recognise the faces
 
 
 
-cap = cv2.VideoCapture("TestVid1.wmv")                                                       #   Camera object
+cap = cv2.VideoCapture(0)                                                       #   Camera object
 
 ID = 0
 

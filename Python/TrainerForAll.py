@@ -6,8 +6,8 @@ import cv2              #   importing the OpenCV library
 import numpy as np      #   importing Numpy library
 from PIL import Image   #   importing Image library
 
-EigenFace = cv2.face.createEigenFaceRecognizer()     # creating EIGEN FACE RECOGNISER
-FisherFace = cv2.face.createFisherFaceRecognizer()  # Create FISHER FACE RECOGNISER
+EigenFace = cv2.face.createEigenFaceRecognizer(600)     # creating EIGEN FACE RECOGNISER
+FisherFace = cv2.face.createFisherFaceRecognizer(600)  # Create FISHER FACE RECOGNISER
 LBPHFace = cv2.face.createLBPHFaceRecognizer()      # Create LBPH FACE RECOGNISER
 
 path = 'dataSet'                                     # path to the photos
@@ -37,7 +37,7 @@ IDs, FaceList = getImageWithID(path)
 
 
 print('TRAINING......')
-EigenFace.train(FaceList, IDs)             # The recongniser is trained using the images
+EigenFace.train(FaceList, IDs)                          # The recongniser is trained using the images
 print('EIGEN FACE RECOGNISER COMPLETE')
 EigenFace.save('Recogniser/trainingDataEigan.xml')
 print('FILE SAVED..')
