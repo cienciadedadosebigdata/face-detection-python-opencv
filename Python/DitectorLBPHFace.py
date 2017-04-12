@@ -19,7 +19,7 @@ recognise.load("Recogniser/trainingDataLBPH.xml")                               
     
 # -------------------------     START THE VIDEO FEED ------------------------------------------
 
-cap = cv2.VideoCapture(0)                                                       #   Camera object
+cap = cv2.VideoCapture("TestVid1.wmv")                                                       #   Camera object
 
 while (True):
     ret, img = cap.read()                                                       #   Read the camera object

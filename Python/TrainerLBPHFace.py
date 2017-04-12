@@ -30,4 +30,5 @@ IDs, FaceList = getImageWithID(path)
 
 recog .train(FaceList, IDs)             # The recongniser is trained using the images
 recog.save('Recogniser/trainingData.xml')
+print recog.getHistograms
 cv2.destroyAllWindows();

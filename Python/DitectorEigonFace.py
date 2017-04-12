@@ -12,13 +12,12 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
 
 
-recognise = cv2.face.createEigenFaceRecognizer(num_components = 50, threshold = 15000)  # creating EIGEN FACE RECOGNISER 
+recognise = cv2.face.createEigenFaceRecognizer(num_components = 10, threshold = 10000)  # creating EIGEN FACE RECOGNISER 
 recognise.load("Recogniser/trainingDataEigan.xml")                                      #   Load the training data from the trainer to recognise the faces
 
 
 
-cap = cv2.VideoCapture(0)                                                       #   Camera object
-cap.set(6, 10)                                                                  #   Set the frame rate to 20
+cap = cv2.VideoCapture("TestVid1.wmv")                                                       #   Camera object
 
 ID = 0
 
@@ -34,7 +33,6 @@ while (True):
         roi_gray = cv2.resize((gray[y: y+h, x: x+w]), (110, 110))               #   The Face is isolated and cropped
         eyes = eye_cascade.detectMultiScale(roi_gray)
         for (ex, ey, ew, eh) in eyes:
-            cv2.rectangle(gray, (x, y), (x + w, y + h), (255, 255, 255), 1)     #   Draw a rectangle arround the face
             ID, conf = recognise.predict(roi_gray)                              #   Determine the ID of the photo
             NAME = NameFind.ID2Name(ID, conf)
             NameFind.DispID(x, y, w, h, NAME, gray)
