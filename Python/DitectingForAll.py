@@ -26,7 +26,7 @@ FISHER.load("Recogniser/trainingDataFisher.xml")
     
 # -------------------------     START THE VIDEO FEED ------------------------------------------
 
-img = cv2.imread('Linda.jpg')
+img = cv2.imread('Me4.jpg')
 
 
 #--------------
