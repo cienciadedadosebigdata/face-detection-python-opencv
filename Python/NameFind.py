@@ -55,7 +55,7 @@ def DispID(x, y, w, h, NAME, Image):
         Name_y_pos = Name_y_pos = y + h + 10
           
  #  ------------------------------------    THE DRAWING OF THE BOX AND ID   --------------------------------------
-    #cv2.rectangle(Image, (x, y), (x + w, y + h), (255, 255, 255), 1)     #   Draw a rectangle arround the face
+    
     cv2.line(Image, (x, y), (x + (w/5) ,y), WHITE, 1)
     cv2.line(Image, (x+((w/5)*4), y), (x+w, y), WHITE, 1)
     cv2.line(Image, (x, y), (x, y+(h/5)), WHITE, 1)
@@ -110,3 +110,6 @@ def DispID3(x, y, w, h, NAME, Image):
     cv2.rectangle(Image, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), (0,0,0), -2)           #   Draw a Black Rectangle over the face frame
     cv2.rectangle(Image, (Name_X_pos-10, Name_y_pos-25), (Name_X_pos +10 + (len(NAME) * 7), Name_y_pos-1), WHITE, 1) 
     cv2.putText(Image, NAME, (Name_X_pos, Name_y_pos - 10), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)                         #   Print the name of the ID
+
+def DrawBox(Image, x, y, w, h):
+    cv2.rectangle(Image, (x, y), (x + w, y + h), (255, 255, 255), 1)     #   Draw a rectangle arround the face
