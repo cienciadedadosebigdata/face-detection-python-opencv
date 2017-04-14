@@ -21,6 +21,8 @@ recognise.load("Recogniser/trainingDataFisher.xml")                             
 
 cap = cv2.VideoCapture(0)                                                       #   Camera object
 
+cap = cv2.VideoCapture('TestVid.wmv')   #   Camera object
+
 ID = 0
 
 while (True):

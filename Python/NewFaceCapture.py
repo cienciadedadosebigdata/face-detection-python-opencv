@@ -30,9 +30,18 @@ while True:
         #   Eyes should be inside the face.
         roi_gray = gray[y: y+h, x: x+w]                             #   The Face is isolated and cropped
         eyes = eye_cascade.detectMultiScale(roi_gray)
+        
         for (ex, ey, ew, eh) in eyes:
+            if eyes.shape[0] == 2:
+                print "2 EYES"
+                cv2.line(gray, (x+eyes[0][0], y+eyes[0][1]), (x+eyes[1][0], y+eyes[1][1]), WHITE, 1) 
+
+            
+            
             cv2.rectangle(gray, (x, y), (x+w, y+h), WHITE, 1)
             cv2.putText(gray, "FACE DITECTED", (x+(w/2), y-5), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)        
+
+            
             
             cv2.rectangle(gray, (0,0), (gray.shape[1], 30), (0,0,0), -1)
             cv2.putText(gray, (str(Count) + " Photos Saved ..."), (200, 20), cv2.FONT_HERSHEY_DUPLEX, .6, WHITE)

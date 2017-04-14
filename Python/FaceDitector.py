@@ -20,7 +20,7 @@ spec_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
 Count = 0                                    
 
-cap = cv2.VideoCapture(0)   #   Camera object
+cap = cv2.VideoCapture('TestFile.wmv')   #   Camera object
 
 while True:
     ret, img2 = cap.read()
@@ -32,18 +32,22 @@ while True:
         cv2.putText(img, "FACE", (x, y-5), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)
 
         #   Eyes should be inside the face.
-        #roi_gray = gray[y: y+h, x: x+w]             #   The Face is isolated and cropped
-        
-    eyes = eye_cascade.detectMultiScale(img)
-    for (ex, ey, ew, eh) in eyes:
-        cv2.rectangle(img, (ex, ey), (ex+ew, ey+eh), WHITE, 1)
-        cv2.putText(img, "EYE", (ex, ey-5), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)
-        
-    glass = spec_cascade.detectMultiScale(img)
-    for (sx, sy, sw, sh) in glass:
-        cv2.rectangle(img, (sx, sy), (sx+sw, sy+sh), WHITE, 1)
-        cv2.putText(img, "SPECS", (sx, sy-5), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)
+            #roi_gray = gray[y: y+h, x: x+w]             #   The Face is isolated and cropped
+            
+        eyes = eye_cascade.detectMultiScale(img)
+        for (ex, ey, ew, eh) in eyes:
+            cv2.rectangle(img, (ex, ey), (ex+ew, ey+eh), WHITE, 1)
+            cv2.putText(img, "EYE", (ex, ey-5), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)
+            if eyes.shape[0] == 2:
+                print "2 EYES"
+                cv2.line(img, (eyes[0][0] + (eyes[0][2]/2), eyes[0][1]+eyes[0][3]/2), (eyes[1][0]+eyes[1][2]/2, eyes[1][1] + eyes[1][3]/2), WHITE, 1) 
+##    glass = spec_cascade.detectMultiScale(img)
+##    for (sx, sy, sw, sh) in glass:
+##        cv2.rectangle(img, (sx, sy), (sx+sw, sy+sh), WHITE, 1)
+##        cv2.putText(img, "SPECS", (sx, sy-5), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)
 
+        M = cv2.getRotationMatrix2D((110/2,110/2),90,1)
+        dst = cv2.warpAffine(img,M,(110,110))
     
     cv2.imshow('Face Recognition System', img)          #   Show the video  
     
