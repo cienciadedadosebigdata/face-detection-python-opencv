@@ -29,6 +29,7 @@ def DetectEyes(Cascade1, Cascade2, Image):
             if glass.shape[0] == 2:                                                         #   The Image should have 2 eyes                
                     CentE1 = (glass[0][0] + (glass[0][2]/2), glass[0][1] + glass[0][3]/2)
                     CentE2 = (glass[1][0] + (glass[1][2]/2), glass[1][1] + glass[1][3]/2)
+                    
                     DY = ((glass[1][1] + glass[1][3]/2) - (glass[0][1]+glass[0][3]/2))      #   Height diffrence between the glass
                     DX = ((glass[1][0] + glass[1][2]/2) - glass[0][0]+(glass[0][2]/2))      #   Width diffrance between the glass
                     
@@ -44,6 +45,7 @@ def DetectEyes(Cascade1, Cascade2, Image):
                         for (xx, yy, ww, hh) in Face2:
                             cv2.rectangle(dst, (xx, yy), (xx+ww, yy+hh), WHITE, 1)
                             Cropped = dst[yy: yy+hh, xx: xx+ww]
+                            cv2.circle(gray, CentE1, 30, (255, 0, 0), 2, 1)
                             cv2.imshow("CROPPEDANDROTATED", Cropped)
                             return Cropped, x, y, h, w
                         
@@ -54,7 +56,8 @@ def DetectEyes(Cascade1, Cascade2, Image):
 Count = 0                                    
 Theta = 0
 cap = cv2.VideoCapture("TestFile.wmv")   #   Camera object
-cap = cv2.VideoCapture(0)
+#cap = cv2.VideoCapture(0)
+cap = cv2.imread("Me2.jpg")
 while True:
     ret, img = cap.read()
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)                    #   Convert the Camera to gray
