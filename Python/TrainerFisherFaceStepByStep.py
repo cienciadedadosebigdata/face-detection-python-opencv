@@ -7,7 +7,7 @@ import numpy as np      #   importing Numpy library
 from PIL import Image   #   importing Image library
 import NameFind
 
-Info = open("EIGEN_TRAINER.txt", "r+")
+Info = open("FISHER_TRAINER.txt", "r+")
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
 path = 'dataSet'                                     # path to the photos
@@ -48,10 +48,10 @@ for (x, y, w, h) in faces:
     cv2.waitKey(0)
     
     for _ in range(200):
-        recog = cv2.face.createEigenFaceRecognizer(Lev)     # creating EIGEN FACE RECOGNISER 
-        print('TRAINING......')
+        recog = cv2.face.createFisherFaceRecognizer(Lev)     # creating EIGEN FACE RECOGNISER 
+        print('TRAINING FOR' + str(Lev) + ' ......')
         recog .train(FaceList, IDs)             # The recongniser is trained using the images
-        print('EIGEN FACE RECOGNISER COMPLETE')
+        print('FISHERFACE FACE RECOGNISER COMPLETE')
         ID, conf = recog.predict(Face)
         NAME = NameFind.ID2Name(ID, conf)
         NameFind.DispID(x, y, w, h, NAME, gray)

@@ -16,7 +16,7 @@ spec_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
 
 #ID = NameFind.AddName()
-
+#   GlassCascade    FaceCascade     Image   +++++++++++++++++++++
 def DetectEyes(Cascade1, Cascade2, Image):
     dst = []
     Theta = 0
@@ -47,30 +47,33 @@ def DetectEyes(Cascade1, Cascade2, Image):
                     print "Theta  " + str(Theta)
                     
                     M = cv2.getRotationMatrix2D((cols/2,rows/2),Theta,1)                #   Find the Rotation Matrix
-                    dst = cv2.warpAffine(Image,M,(cols,rows))
-                    Face2 = Cascade2.detectMultiScale(dst, 1.3, 5)
-                    FaceX = Face2[0][0]
-                    FaceY = Face2[0][1]
-                    FaceWidth = Face2[0][2]
-                    FaceHeigth = Face2[0][3]
-                    
-                    print "Face 2 Info  " + str(Face2)
+                    Image = cv2.warpAffine(Image,M,(cols,rows))
+                    cv2.imshow("ROTATED", Image)
 
-                    cv2.rectangle(dst, (FaceX, FaceY), (FaceX + FaceWidth, FaceY + FaceHeigth), WHITE, 1)
-                    Cropped = dst[FaceY: FaceY + FaceHeigth, FaceX: FaceX + FaceWidth]
-                        
-                    cv2.imshow("CROPPEDANDROTATED", Cropped)
-                    return Cropped, x, y, h, w
-                    
-                    cv2.imshow("ROTATED", dst)
-                     
+            Face2 = Cascade2.detectMultiScale(Image, 1.3, 5)                      #   This ditects a face in the image
+            FaceX = Face2[0][0]
+            FaceY = Face2[0][1]
+            FaceWidth = Face2[0][2]
+            FaceHeigth = Face2[0][3]
+            
+            print "Face 2 Info  " + str(Face2)
+
+            #cv2.rectangle(Image, (FaceX, FaceY), (FaceX + FaceWidth, FaceY + FaceHeigth), WHITE, 1)
+            CroppedFace = Image[FaceY: FaceY + FaceHeigth, FaceX: FaceX + FaceWidth]
+                
+            cv2.imshow("CROPPED AND ROTATED", CroppedFace)
+            return CroppedFace, x, y, h, w
+            
+            
+        
+              
 
 
 Count = 0                                    
 
 cap = cv2.VideoCapture("TestFile.wmv")   #   Camera object
 #cap = cv2.VideoCapture(0)
-img = cv2.imread("Me5.jpg")
+img = cv2.imread("Me4.jpg")
 
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)                    #   Convert the Camera to gray
 rows,cols = gray.shape	                                    #   Get the size of the image
@@ -87,8 +90,11 @@ dst = gray
     #   Eyes should be inside the face.
     
 XX = DetectEyes(spec_cascade, face_cascade, gray)
+
 if (XX):
+    cv2.imshow("RETURNED", XX[0])
     NameFind.DrawBox(gray, XX[1], XX[2], XX[3], XX[4])
+
 
 cv2.imshow('Face Recognition System Capture Faces', gray)       #   Show the video  
 

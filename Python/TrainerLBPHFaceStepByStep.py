@@ -7,11 +7,11 @@ import numpy as np      #   importing Numpy library
 from PIL import Image   #   importing Image library
 import NameFind
 
-Info = open("EIGEN_TRAINER.txt", "r+")
+Info = open("LBPH_TRAINER.txt", "r+")
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
 path = 'dataSet'                                     # path to the photos
-img = cv2.imread('Me4.jpg')
+img = cv2.imread('Me3.jpg')
 
 def getImageWithID (path):
     imagePaths = [os.path.join(path, f) for f in os.listdir(path)]
@@ -47,9 +47,9 @@ for (x, y, w, h) in faces:
     cv2.imshow("RESULT", gray)
     cv2.waitKey(0)
     
-    for _ in range(200):
-        recog = cv2.face.createEigenFaceRecognizer(Lev)     # creating EIGEN FACE RECOGNISER 
-        print('TRAINING......')
+    for _ in range(50):
+        recog = cv2.face.createLBPHFaceRecognizer(Lev)     # creating EIGEN FACE RECOGNISER 
+        print('TRAINING FOR  ' + str(Lev) + ' ......')
         recog .train(FaceList, IDs)             # The recongniser is trained using the images
         print('EIGEN FACE RECOGNISER COMPLETE')
         ID, conf = recog.predict(Face)

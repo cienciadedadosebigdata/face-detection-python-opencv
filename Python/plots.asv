@@ -1,0 +1,58 @@
+figure
+plot(Componen, ID, 'Color',[0,0.7,0.9])
+
+title('Returned ID on EigenFace Recognition While Changing Number of Components')
+ylabel('ID')
+xlabel('Number of Components')
+ylim([15 25])
+xlim([1 200 ])
+
+
+plot(Componen, Confidence, 'Color',[0,0.7,0.9])
+
+title('Returned Confidence on EigenFace While Changing Number of Components')
+ylabel('Confidence')
+xlabel('Number of Components')
+%ylim([15 25])
+xlim([1 200 ])
+
+figure
+
+plot(Componen, FID, 'Color',[0,0.7,0.9])
+
+title('Returned ID on FisherFace Recognition While Changing Number of Components')
+ylabel('ID')
+xlabel('Number of Components')
+ylim([15 25])
+xlim([1 200 ])
+
+figure
+
+plot(Componen, FConf, 'red')
+
+title('Returned Confidence on FisherFace While Changing Number of Components')
+ylabel('Confidence')
+xlabel('Number of Components')
+ylim([0 1500])
+xlim([1 200 ])
+
+
+figure
+
+plot(LID, 'Color',[0,0.7,0.9])
+
+title('Returned ID on LBPHFace Recognition While Changing Number of Components')
+ylabel('ID')
+xlabel('Number of Components')
+ylim([15 25])
+xlim([1 50 ])
+
+figure
+
+plot(LID, 'Color',[0,0.7,0.9])
+
+title('Returned ID on LBPHFace Recognition While Changing Number of Components')
+ylabel('ID')
+xlabel('Number of Components')
+ylim([15 25])
+xlim([1 50 ])
