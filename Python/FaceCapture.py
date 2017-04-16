@@ -9,8 +9,8 @@ WHITE = [255, 255, 255]
 
 #   import the Haar cascades for face ditection
 
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalcatface.xml')
-eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+face_cascade = cv2.CascadeClassifier('Haar/haarcascade_frontalcatface.xml')
+eye_cascade = cv2.CascadeClassifier('Haar/haarcascade_eye.xml')
 
 
 ID = NameFind.AddName()
@@ -28,8 +28,8 @@ while (Count < 50):
         
 
         #   Eyes should be inside the face.
-        roi_gray = gray[y: y+h, x: x+w]                             #   The Face is isolated and cropped
-        eyes = eye_cascade.detectMultiScale(roi_gray)
+        gray_face = gray[y: y+h, x: x+w]                             #   The Face is isolated and cropped
+        eyes = eye_cascade.detectMultiScale(gray_face)
         for (ex, ey, ew, eh) in eyes:
             cv2.rectangle(gray, (x, y), (x+w, y+h), WHITE, 1)
             cv2.putText(gray, "FACE DITECTED", (x+(w/2), y-5), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)        
@@ -38,8 +38,8 @@ while (Count < 50):
             cv2.putText(gray, (str(Count) + " Photos Saved ..."), (200, 20), cv2.FONT_HERSHEY_DUPLEX, .6, WHITE)
             print(str(Count))
            
-            cv2.imwrite("dataSet/User." + str(ID) + "." + str(Count) + ".jpg", roi_gray)
-            cv2.imshow("CAPTURED PHOTO", roi_gray)                  #   Show the detected faces
+            cv2.imwrite("dataSet/User." + str(ID) + "." + str(Count) + ".jpg", gray_face)
+            cv2.imshow("CAPTURED PHOTO", gray_face)                  #   Show the detected faces
             cv2.waitKey(300)
             Count = Count +1
 

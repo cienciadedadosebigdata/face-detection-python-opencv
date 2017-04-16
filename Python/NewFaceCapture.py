@@ -30,8 +30,8 @@ while True:
         
 
         #   Eyes should be inside the face.
-        roi_gray = gray[y: y+h, x: x+w]                             #   The Face is isolated and cropped
-        eyes = eye_cascade.detectMultiScale(roi_gray)
+        gray_face = gray[y: y+h, x: x+w]                             #   The Face is isolated and cropped
+        eyes = eye_cascade.detectMultiScale(gray_face)
         
         for (ex, ey, ew, eh) in eyes:
             if eyes.shape[0] == 2:                                  #   The Image should have 2 eyes 
@@ -53,9 +53,9 @@ while True:
                     dst = cv2.warpAffine(gray,M,(cols,rows))                        #   Rotate the Image
 
 
-                    roi_gray = dst[y: y+h, x: x+w]                                  #   Crop the rotated Image
+                    gray_face = dst[y: y+h, x: x+w]                                  #   Crop the rotated Image
                     
-                cv2.imshow("CAPTURED PHOTO", roi_gray)
+                cv2.imshow("CAPTURED PHOTO", gray_face)
                 #cv2.line(gray, (x+eyes[0][0]+(eyes[0][2]/2), y+eyes[0][1]+eyes[0][3]/2), (x+eyes[1][0] + eyes[1][2]/2, y+eyes[1][1] + eyes[1][3]/2), WHITE, 1)      # Draw A line between the eyes 
                 #cv2.rectangle(gray, (x, y), (x+w, y+h), WHITE, 1)
                 cv2.putText(gray, "FACE DITECTED", (x+(w/2), y-5), cv2.FONT_HERSHEY_DUPLEX, .4, WHITE)        
@@ -66,7 +66,7 @@ while True:
             cv2.putText(gray, (str(Theta) + " Photos Saved ..."), (200, 20), cv2.FONT_HERSHEY_DUPLEX, .6, WHITE)
             print(str(Count))
            
-            #cv2.imwrite("dataSet/User." + str(ID) + "." + str(Count) + ".jpg", roi_gray)
+            #cv2.imwrite("dataSet/User." + str(ID) + "." + str(Count) + ".jpg", gray_face)
             
             #cv2.waitKey(300)
             Count = Count +1
