@@ -42,4 +42,4 @@ print('LBPH FACE RECOGNISER COMPLETE...')
 LBPHFace.save('Recogniser/trainingDataLBPH.xml')
 print ('ALL XML FILES SAVED...')
 
-cv2.destroyAllWindows();
+cv2.destroyAllWindows()

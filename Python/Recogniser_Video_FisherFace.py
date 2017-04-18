@@ -10,11 +10,10 @@ eye_cascade = cv2.CascadeClassifier('Haar/haarcascade_eye.xml')
 recognise = cv2.face.createFisherFaceRecognizer(5, 400)                        # creating FISHER FACE RECOGNISER
 recognise.load("Recogniser/trainingDataFisher.xml")                            # Load the training data from the trainer to recognise the faces
 
+# -------------------------     START THE VIDEO FEED ------------------------------------------
 cap = cv2.VideoCapture(0)                                                       # Camera object
 # cap = cv2.VideoCapture('TestVid.wmv')   # Video object
-
 ID = 0
-
 while True:
     ret, img = cap.read()                                                       # Read the camera object
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)                                # Convert the Camera to gray

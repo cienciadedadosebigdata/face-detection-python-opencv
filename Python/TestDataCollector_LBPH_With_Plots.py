@@ -1,15 +1,16 @@
 # ------------ COLLECTS DATA ON LBPH BY RUNNING IT ON A GIVEN IMAGE AND SAVING DATA TO A TEXT FILE -------------
-# ------------------------------ SAVES THE DATA IN 3 TEXT FILES ----------------------------------------------
+# ---------------------- SAVES THE DATA IN 3 TEXT FILES  & PLOTS THE DATA --------------------------------------
+# ---------------------------- BY LAHIRU DINALANKARA  - AKA SPIKE ----------------------------------------------
 
 import os               # importing the OS for path
 import cv2              # importing the OpenCV library
 import numpy as np      # importing Numpy library
 from PIL import Image   # importing Image library
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt # Importing Plot library
 import NameFind
 
 face_cascade = cv2.CascadeClassifier('Haar/haarcascade_frontalcatface.xml')
-path = 'dataSet'                                     # path to the photos
+path = 'dataSet'                                                # path to the photos
 
 img = cv2.imread('Me4.jpg')        # -------------->>>>>>>>>>>>>>>>>>  The Image to be checked
 
@@ -21,7 +22,7 @@ def getImageWithID(path):
     for imagePath in imagePaths:
         faceImage = Image.open(imagePath).convert('L')          # Open image and convert to gray
         print(str((faceImage.size)))
-        faceImage = faceImage.resize((110, 110))                 # resize the image
+        faceImage = faceImage.resize((110, 110))                # resize the image
         faceNP = np.array(faceImage, 'uint8')                   # convert the image to Numpy array
         print(str((faceNP.shape)))
         ID = int(os.path.split(imagePath)[-1].split('.')[1])    # Get the ID of the array
@@ -32,11 +33,11 @@ def getImageWithID(path):
 
 
 IDs, FaceList = getImageWithID(path)
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)                                # Convert the Camera to gray
-faces = face_cascade.detectMultiScale(gray, 1.3, 4)                         # Detect the faces and store the positions
-radTrain = open("SaveData/LBPH/LBPH_PIXEL_RADIUS.txt", "w+")  # open the file to write data
-neiTrain = open("SaveData/LBPH/LBPH_NEIGHBOURS.txt", "w+")   # open the file to write data
-cellTrain = open("SaveData/LBPH/LBPH_CELLS.txt", "w+")       # open the file to write data
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)                   # Convert the Camera to gray
+faces = face_cascade.detectMultiScale(gray, 1.3, 4)            # Detect the faces and store the positions
+radTrain = open("SaveData/LBPH/LBPH_PIXEL_RADIUS.txt", "w+")   # open the file to write data
+neiTrain = open("SaveData/LBPH/LBPH_NEIGHBOURS.txt", "w+")     # open the file to write data
+cellTrain = open("SaveData/LBPH/LBPH_CELLS.txt", "w+")         # open the file to write data
 
 for (x, y, w, h) in faces:
     Face = cv2.resize((gray[y: y+h, x: x+w]), (110, 110))
@@ -47,7 +48,7 @@ for (x, y, w, h) in faces:
     for _ in range(54):
         recog = cv2.face.createLBPHFaceRecognizer(radPix)     # creating EIGEN FACE RECOGNISER
         print('TRAINING FOR  ' + str(radPix) + ' PIXELS FROM CENTRE')
-        recog.train(FaceList, IDs)                                          # The recogniser is trained using the images
+        recog.train(FaceList, IDs)                            # The recogniser is trained using the images
         print('LBPH FACE RECOGNISER TRAINED')
         ID, conf = recog.predict(Face)
         rad_tabal_ID.append(ID)
@@ -55,17 +56,18 @@ for (x, y, w, h) in faces:
         radTrain.write(str(ID) + "," + str(conf) + "\n")
         print ("FOR RADIUS: " + str(radPix) + " ID IS: " + str(ID) + " THE CONFIDENCE: " + str(conf))
         radPix = radPix + 1
+
     plt.subplot(3, 2, 1)
     plt.plot(rad_tabal_ID)
-    plt.title('ID against Pixel Radius')
-    plt.axis([10, 25, 0, 53])
-    plt.ylabel('ID')
-    plt.xlabel('Radius (Pixels)')
+    plt.title('ID against Pixel Radius', fontsize=10)
+    plt.axis([0, 53, 0, 25])
+    plt.ylabel('ID', fontsize=8)
+    plt.xlabel('Radius (Pixels)', fontsize=8)
     plt.subplot(3, 2, 2)
     plt.plot(rad_tabal_conf, 'red')
-    plt.title('Confidence against Pixel Radius')
-    plt.ylabel('Confidence')
-    plt.xlabel('Radius (Pixels)')
+    plt.title('Confidence against Pixel Radius', fontsize=10)
+    plt.ylabel('Confidence', fontsize=8)
+    plt.xlabel('Radius (Pixels)', fontsize=8)
     # ---------------------------  Run tests for the neighbours -----------------------------
     radPixel = 2    # ------>> CHANGE THE PIXEL RADIUS IF A BETTER VALUE IS FOUND
     neighbour = 1
@@ -74,7 +76,7 @@ for (x, y, w, h) in faces:
     for _ in range(13):
         recog = cv2.face.createLBPHFaceRecognizer(radPixel, neighbour)  # creating FACE RECOGNISER
         print('TRAINING FOR  ' + str(neighbour) + ' NEIGHBOURS')
-        recog.train(FaceList, IDs)                                          # The recogniser is trained using the images
+        recog.train(FaceList, IDs)                                      # The recogniser is trained using the images
         print('LBPH FACE RECOGNISER TRAINED')
         ID, conf = recog.predict(Face)
         nei_ID.append(ID)
@@ -84,15 +86,15 @@ for (x, y, w, h) in faces:
         neighbour = neighbour + 1
     plt.subplot(3, 2, 3)
     plt.plot(nei_ID)
-    plt.title('ID against number of neighbours')
-    plt.axis([10, 25, 0, 12])
-    plt.ylabel('ID')
-    plt.xlabel('Number of neighbours')
+    plt.title('ID against number of neighbours', fontsize=10)
+    plt.axis([0, 12, 10, 25])
+    plt.ylabel('ID', fontsize=8)
+    plt.xlabel('Number of neighbours', fontsize=8)
     plt.subplot(3, 2, 4)
     plt.plot(nei_conf, 'red')
-    plt.title('ID against number of neighbours')
-    plt.ylabel('Confidence')
-    plt.xlabel('Number of neighbours')
+    plt.title('ID against number of neighbours', fontsize=10)
+    plt.ylabel('Confidence', fontsize=8)
+    plt.xlabel('Number of neighbours', fontsize=8)
     # ---------------------------  Run tests for the Cell Number -----------------------------
     neighbour = 2   # ------>> CHANGE THE NEIGHBOUR IF BETTER VALUE IS FOUND
     cellVal = 1
@@ -111,19 +113,22 @@ for (x, y, w, h) in faces:
         cellVal = cellVal + 1
     plt.subplot(3, 2, 5)
     plt.plot(cell_ID)
-    plt.title('ID against number of cells')
-    plt.axis([10, 25, 0, 49])
-    plt.ylabel('ID')
-    plt.xlabel('Number of Cells')
+    plt.title('ID against number of cells', fontsize=10)
+    plt.axis([0, 49, 0, 25])
+    plt.ylabel('ID', fontsize=8)
+    plt.xlabel('Number of Cells', fontsize=8)
     plt.subplot(3, 2, 6)
     plt.plot(cell_conf, 'red')
-    plt.title('ID against number of cells')
-    plt.ylabel('Confidence')
-    plt.xlabel('Number of Cells')
+    plt.title('ID against number of cells', fontsize=10)
+    plt.ylabel('Confidence', fontsize=8)
+    plt.xlabel('Number of Cells', fontsize=8)
+    plt.tight_layout()
     plt.show()
+
 radTrain.close()
 neiTrain.close()
 cellTrain.close()
-
+cv2.imshow('Tested Image', gray)
 print 'All FILES ARE WRITTEN...'
+cv2.waitKey(0)
 cv2.destroyAllWindows()

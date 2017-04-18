@@ -48,7 +48,4 @@ for (x, y, w, h) in faces:                                  # Frames  LOCATION X
 
 cv2.imshow('LBPH Face Recognition System', gray)           # IMAGE DISPLAY
 cv2.waitKey(0)
-
-
-
 cv2.destroyAllWindows()
