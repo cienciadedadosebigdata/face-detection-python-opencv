@@ -41,7 +41,7 @@ for (x, y, w, h) in faces:
     Lev = 1
     eigen_ID = []
     eigen_conf = []
-    for _ in range(3):
+    for _ in range(200):
         recog = cv2.face.createEigenFaceRecognizer(Lev)     # creating EIGEN FACE RECOGNISER 
         print('TRAINING FOR  ' + str(Lev) + ' COMPONENTS')
         recog .train(FaceList, IDs)                         # The recongniser is trained using the images

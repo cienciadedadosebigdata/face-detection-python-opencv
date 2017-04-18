@@ -7,7 +7,7 @@ import NameFind             # Import Functions
 # import the Haar cascades for face and eye ditection
 face_cascade = cv2.CascadeClassifier('Haar/haarcascade_frontalcatface.xml')
 eye_cascade = cv2.CascadeClassifier('Haar/haarcascade_eye.xml')
-recognise = cv2.face.createFisherFaceRecognizer(5, 400)                        # creating FISHER FACE RECOGNISER
+recognise = cv2.face.createFisherFaceRecognizer(5, 600)                        # creating FISHER FACE RECOGNISER
 recognise.load("Recogniser/trainingDataFisher.xml")                            # Load the training data from the trainer to recognise the faces
 
 # -------------------------     START THE VIDEO FEED ------------------------------------------

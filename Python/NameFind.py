@@ -150,6 +150,7 @@ def DetectEyes(Image):
 
                 M = cv2.getRotationMatrix2D((cols / 2, rows / 2), Theta, 1)                 # Find the Rotation Matrix
                 Image = cv2.warpAffine(Image, M, (cols, rows))
+                # cv2.imshow('ROTATED', Image)                                              # UNCOMMENT IF YOU WANT TO SEE THE
 
                 Face2 = face.detectMultiScale(Image, 1.3, 5)                                # This detects a face in the image
                 for (FaceX, FaceY, FaceWidth, FaceHeight) in Face2:

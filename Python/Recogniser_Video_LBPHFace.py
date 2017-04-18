@@ -28,14 +28,14 @@ while True:
     for (x, y, w, h) in faces:                                                  # Frames  LOCATION X, Y  WIDTH, HEIGHT
         
         # Eyes should be inside the face.
-        gray_face = gray[y: y+h, x: x+w]                                         # The Face is isolated and cropped
+        gray_face = gray[y: y+h, x: x+w]                                        # The Face is isolated and cropped
         eyes = eye_cascade.detectMultiScale(gray_face)
         for (ex, ey, ew, eh) in eyes:
-            ID, conf = recognise.predict(gray_face)                    # Determine the ID of the photo
+            ID, conf = recognise.predict(gray_face)                             # Determine the ID of the photo
             NAME = NameFind.ID2Name(ID, conf)
             NameFind.DispID(x, y, w, h, NAME, gray)
                   
-    cv2.imshow('LBPH Face Recognition System', gray)                                 # Show the video  
+    cv2.imshow('LBPH Face Recognition System', gray)                            # Show the video
     
     if cv2.waitKey(1) & 0xFF == ord('q'):                                       # Quit if the key is Q
         break
