@@ -157,4 +157,3 @@ def DetectEyes(Image):
                     CroppedFace = Image[FaceY: FaceY + FaceHeight, FaceX: FaceX + FaceWidth]
                     return CroppedFace
 
-

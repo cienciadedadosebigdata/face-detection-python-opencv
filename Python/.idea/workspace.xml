@@ -5,125 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e20e8c7b-bdfc-4e47-9ce9-3bced22a1f77" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Face_Rotate.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TestDataCollector_LBPH_With_Plots.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dataSet/User.20.50.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dataSet/User.21.50.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlowCharts/DATA_COLLECTION.png" afterPath="$PROJECT_DIR$/FlowCharts/DATA_COLLECTION.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlowCharts/FACE_RECOGNITION_FLOW_CHART.png" afterPath="$PROJECT_DIR$/FlowCharts/FACE_RECOGNITION_FLOW_CHART.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FlowCharts/FACE_RECOGNITION_FLOW_CHART.vsdx" afterPath="$PROJECT_DIR$/FlowCharts/FACE_RECOGNITION_FLOW_CHART.vsdx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/VisionProject.pptx" afterPath="$PROJECT_DIR$/VisionProject.pptx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.0.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.0.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.1.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.10.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.11.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.12.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.13.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.14.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.15.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.16.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.17.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.18.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.19.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.2.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.20.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.20.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.21.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.21.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.22.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.22.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.23.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.23.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.24.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.24.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.25.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.25.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.26.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.26.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.27.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.27.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.28.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.28.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.29.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.29.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.3.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.30.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.30.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.31.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.31.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.32.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.32.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.33.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.33.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.34.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.34.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.35.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.35.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.36.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.36.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.37.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.37.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.38.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.38.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.39.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.39.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.4.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.40.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.40.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.41.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.41.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.42.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.42.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.43.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.43.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.44.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.44.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.45.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.45.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.46.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.46.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.47.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.47.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.48.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.48.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.49.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.49.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.5.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.6.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.7.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.8.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.20.9.jpg" afterPath="$PROJECT_DIR$/dataSet/User.20.9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.0.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.0.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.1.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.10.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.11.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.12.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.13.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.14.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.15.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.16.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.17.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.18.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.19.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.2.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.20.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.20.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.21.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.21.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.22.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.22.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.23.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.23.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.24.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.24.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.25.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.25.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.26.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.26.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.27.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.27.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.28.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.28.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.29.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.29.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.3.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.30.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.30.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.31.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.31.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.32.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.32.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.33.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.33.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.34.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.34.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.35.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.35.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.36.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.36.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.37.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.37.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.38.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.38.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.39.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.39.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.4.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.40.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.40.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.41.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.41.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.42.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.42.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.43.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.43.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.44.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.44.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.45.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.45.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.46.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.46.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.47.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.47.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.48.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.48.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.49.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.49.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.5.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.6.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.7.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataSet/User.21.8.jpg" afterPath="$PROJECT_DIR$/dataSet/User.21.8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ColSVG" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Face_Capture_With_Rotate.py" afterPath="$PROJECT_DIR$/Face_Capture_With_Rotate.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NameFind.py" afterPath="$PROJECT_DIR$/NameFind.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Names.txt" afterPath="$PROJECT_DIR$/Names.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Recogniser/trainingDataEigan.xml" afterPath="$PROJECT_DIR$/Recogniser/trainingDataEigan.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Recogniser/trainingDataFisher.xml" afterPath="$PROJECT_DIR$/Recogniser/trainingDataFisher.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Recogniser/trainingDataLBPH.xml" afterPath="$PROJECT_DIR$/Recogniser/trainingDataLBPH.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Recogniser_Video_FisherFace.py" afterPath="$PROJECT_DIR$/Recogniser_Video_FisherFace.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Recogniser_Video_LBPHFace.py" afterPath="$PROJECT_DIR$/Recogniser_Video_LBPHFace.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveData/EIGEN_TEST_DATA.txt" afterPath="$PROJECT_DIR$/SaveData/EIGEN_TEST_DATA.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveData/FISHER_TRAINER.txt" afterPath="$PROJECT_DIR$/SaveData/FISHER_TRAINER.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveData/LBPH/LBPH_CELLS.txt" afterPath="$PROJECT_DIR$/SaveData/LBPH/LBPH_CELLS.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveData/LBPH/LBPH_NEIGHBOURS.txt" afterPath="$PROJECT_DIR$/SaveData/LBPH/LBPH_NEIGHBOURS.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SaveData/LBPH/LBPH_PIXEL_RADIUS.txt" afterPath="$PROJECT_DIR$/SaveData/LBPH/LBPH_PIXEL_RADIUS.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDataCollector_EiganFace.py" afterPath="$PROJECT_DIR$/TestDataCollector_EiganFace.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDataCollector_FisherFace.py" afterPath="$PROJECT_DIR$/TestDataCollector_FisherFace.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestDataCollector_LBPH.py" afterPath="$PROJECT_DIR$/TestDataCollector_LBPH.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,42 +35,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestDataCollector_EiganFace.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TestDataCollector_EiganFace.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TestDataCollector_EiganFace.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestDataCollector_FisherFace.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TestDataCollector_FisherFace.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestDataCollector_LBPH.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestDataCollector_LBPH.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="38" column="92" lean-forward="true" selection-start-line="38" selection-start-column="92" selection-end-line="38" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Recogniser_Video_LBPHFace.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Recogniser_Video_LBPHFace.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="960">
+              <caret line="64" column="50" lean-forward="true" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+              <folding>
+                <element signature="e#364#447#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -203,26 +71,28 @@
         <option value="$PROJECT_DIR$/TrainerLBPHFaceStepByStep.py" />
         <option value="$PROJECT_DIR$/DitectorEigonFace.py" />
         <option value="$PROJECT_DIR$/NewFaceCapture.py" />
-        <option value="$PROJECT_DIR$/TestDataCollector_FisherFace.py" />
-        <option value="$PROJECT_DIR$/TestDataCollector_LBPH.py" />
         <option value="$PROJECT_DIR$/FaceCapture.py" />
-        <option value="$PROJECT_DIR$/Face_Capture_With_Rotate.py" />
         <option value="$PROJECT_DIR$/PhotoDitector.py" />
         <option value="$PROJECT_DIR$/Detector_Video.py" />
         <option value="$PROJECT_DIR$/DitectingForAll.py" />
-        <option value="$PROJECT_DIR$/TestDataCollector_EiganFace.py" />
         <option value="$PROJECT_DIR$/Recogniser_Video_FisherFace.py" />
-        <option value="$PROJECT_DIR$/Recogniser_Video_LBPHFace.py" />
         <option value="$PROJECT_DIR$/Trainer_All.py" />
         <option value="$PROJECT_DIR$/Face_Rotate.py" />
         <option value="$PROJECT_DIR$/Recogniser_Video_EigonFace.py" />
+        <option value="$PROJECT_DIR$/TestDataCollector_FisherFace.py" />
+        <option value="$PROJECT_DIR$/Face_Capture_With_Rotate.py" />
+        <option value="$PROJECT_DIR$/TestDataCollector_LBPH.py" />
+        <option value="$PROJECT_DIR$/ColSVG" />
+        <option value="F:/embedded-software-engineering/PythonFiles/PhotoTest.py" />
+        <option value="$PROJECT_DIR$/TestDataCollector_EiganFace.py" />
+        <option value="$PROJECT_DIR$/Recogniser_Video_LBPHFace.py" />
         <option value="$PROJECT_DIR$/NameFind.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-5" />
-    <option name="y" value="3" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
     <option name="width" value="1928" />
     <option name="height" value="1044" />
   </component>
@@ -252,6 +122,7 @@
       <recent name="F:\VisionSystem\Python\FlowCharts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\embedded-software-engineering\PythonFiles" />
       <recent name="F:\VisionSystem\Python" />
     </key>
   </component>
@@ -267,26 +138,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.TestDataCollector_LBPH">
-    <configuration default="false" name="Recogniser_Video_FisherFace" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Face_Rotate">
+    <configuration default="false" name="PhotoTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="F:/embedded-software-engineering/PythonFiles" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Recogniser_Video_FisherFace.py" />
+      <option name="SCRIPT_NAME" value="F:/embedded-software-engineering/PythonFiles/PhotoTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Face_Rotate" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="TestDataCollector_EiganFace" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -298,7 +169,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Face_Rotate.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestDataCollector_EiganFace.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -340,7 +211,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="TestDataCollector_LBPH" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Face_Rotate" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -352,7 +223,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestDataCollector_LBPH.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Face_Rotate.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -423,19 +294,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.Recogniser_Video_FisherFace" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Face_Rotate" />
+      <item index="0" class="java.lang.String" itemvalue="Python.PhotoTest" />
+      <item index="1" class="java.lang.String" itemvalue="Python.TestDataCollector_EiganFace" />
       <item index="2" class="java.lang.String" itemvalue="Python.Recogniser_Video_EigonFace" />
       <item index="3" class="java.lang.String" itemvalue="Python.Recogniser_Video_LBPHFace" />
-      <item index="4" class="java.lang.String" itemvalue="Python.TestDataCollector_LBPH" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Face_Rotate" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.TestDataCollector_LBPH" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Face_Rotate" />
         <item index="1" class="java.lang.String" itemvalue="Python.Recogniser_Video_LBPHFace" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Face_Rotate" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Recogniser_Video_EigonFace" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Recogniser_Video_FisherFace" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Recogniser_Video_EigonFace" />
+        <item index="3" class="java.lang.String" itemvalue="Python.TestDataCollector_EiganFace" />
+        <item index="4" class="java.lang.String" itemvalue="Python.PhotoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -465,7 +336,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="3" width="1928" height="1044" extended-state="0" />
+    <frame x="-4" y="-4" width="1928" height="1044" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -528,7 +399,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="43" column="22" lean-forward="false" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="e#364#447#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -569,7 +442,7 @@
         <state relative-caret-position="330">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="e#84#94#0" expanded="true" />
+            <element signature="e#84#94#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -603,7 +476,7 @@
         <state relative-caret-position="459">
           <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
           <folding>
-            <element signature="e#84#94#0" expanded="true" />
+            <element signature="e#84#94#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -639,21 +512,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Recogniser_Video_FisherFace.py">
+    <entry file="file://$PROJECT_DIR$/Detector_Video.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="91" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="91" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NameFind.py">
+    <entry file="file://$PROJECT_DIR$/Trainer_All.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="152" column="127" lean-forward="false" selection-start-line="152" selection-start-column="127" selection-end-line="152" selection-end-column="127" />
-          <folding>
-            <element signature="e#84#94#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="593">
+          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestDataCollector_FisherFace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestDataCollector_LBPH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="100" column="16" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Recogniser_Video_FisherFace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Face_Capture_With_Rotate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="130" lean-forward="false" selection-start-line="21" selection-start-column="130" selection-end-line="21" selection-end-column="130" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ColSVG">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/embedded-software-engineering/PythonFiles/PhotoTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="45" lean-forward="false" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/embedded-software-engineering/PythonFiles/CamTest1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -665,67 +592,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Detector_Video.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="91" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Recogniser_Video_EigonFace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" column="62" lean-forward="false" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Face_Capture_With_Rotate.py">
+    <entry file="file://$PROJECT_DIR$/NameFind.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trainer_All.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <caret line="159" column="0" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Recogniser_Video_LBPHFace.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        <state relative-caret-position="163">
+          <caret line="14" column="59" lean-forward="false" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestDataCollector_LBPH.py">
+    <entry file="file://$PROJECT_DIR$/Recogniser_Video_EigonFace.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="38" column="92" lean-forward="true" selection-start-line="38" selection-start-column="92" selection-end-line="38" selection-end-column="92" />
+        <state relative-caret-position="90">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestDataCollector_EiganFace.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestDataCollector_FisherFace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="960">
+          <caret line="64" column="50" lean-forward="true" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+          <folding>
+            <element signature="e#364#447#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

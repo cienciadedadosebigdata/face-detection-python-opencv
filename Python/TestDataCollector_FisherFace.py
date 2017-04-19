@@ -35,7 +35,7 @@ def getImageWithID (path):
 
     return np.array(IDs), FaceList                      # The IDs are converted in to a Numpy array
 
-
+face_number = 1
 IDs, FaceList = getImageWithID(path)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)             # Convert the Camera to gray
 faces = face_cascade.detectMultiScale(gray, 1.3, 4)      # Detect the faces and store the positions
@@ -56,6 +56,9 @@ for (x, y, w, h) in faces:
         Info.write(str(ID) + "," + str(conf) + "\n")
         print 'FOR ' + str(Lev) + ' COMPONENTS ID: ' + str(ID) + ' CONFIDENT: ' + str(conf)
         Lev = Lev + 1
+
+    fig = plt.gcf()
+    fig.canvas.set_window_title('RESULTS FOR FACE ' + str(face_number))
     plt.subplot(1, 2, 1)
     plt.plot(fish_ID)
     plt.title('ID against Number of Components', fontsize=10)
@@ -68,7 +71,10 @@ for (x, y, w, h) in faces:
     plt.ylabel('Confidence', fontsize=8)
     plt.xlabel('Number of Components', fontsize=8)
     plt.tight_layout()
+    print ' SHOW RESULTS FOR FACE ' + str(face_number)
+    cv2.imshow('FACE' + str(face_number), Face)
     plt.show()
+    face_number = face_number + 1
     
 Info.close()        
 cv2.destroyAllWindows()

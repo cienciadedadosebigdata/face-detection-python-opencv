@@ -7,6 +7,7 @@ import cv2                                              # importing the OpenCV l
 import numpy as np                                      # importing Numpy library
 from PIL import Image                                   # importing Image library
 import matplotlib.pyplot as plt
+import NameFind
 
 face_cascade = cv2.CascadeClassifier('Haar/haarcascade_frontalcatface.xml')
 path = 'dataSet'                                        # path to the photos
@@ -23,10 +24,10 @@ def getImageWithID (path):
         faceImage = faceImage.resize((110, 110))        # resize the image so the EIGEN recogniser can be trained
         faceNP = np.array(faceImage, 'uint8')           # convert the image to Numpy array
         print(str((faceNP.shape)))
-        ID = int(os.path.split(imagePath)[-1].split('.')[1])    # Retreave the ID of the array
+        ID = int(os.path.split(imagePath)[-1].split('.')[1])    # Get the ID of the array
         FaceList.append(faceNP)                         # Append the Numpy Array to the list
         IDs.append(ID)                                  # Append the ID to the IDs list
-        cv2.imshow("Trainig Set", faceNP)               # Show the images in the list
+
     return np.array(IDs), FaceList                      # The IDs are converted in to a Numpy array
 
 
@@ -34,14 +35,14 @@ IDs, FaceList = getImageWithID(path)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)            # Convert the Camera to gray
 faces = face_cascade.detectMultiScale(gray, 1.3, 4)     # Detect the faces and store the positions
 Info = open("SaveData/EIGEN_TEST_DATA.txt", "w+")
-
+face_number = 1
 
 for (x, y, w, h) in faces:
     Face = cv2.resize((gray[y: y+h, x: x+w]), (110, 110))
     Lev = 1
     eigen_ID = []
     eigen_conf = []
-    for _ in range(200):
+    for _ in range(2):
         recog = cv2.face.createEigenFaceRecognizer(Lev)     # creating EIGEN FACE RECOGNISER 
         print('TRAINING FOR  ' + str(Lev) + ' COMPONENTS')
         recog .train(FaceList, IDs)                         # The recongniser is trained using the images
@@ -52,19 +53,28 @@ for (x, y, w, h) in faces:
         Info.write(str(ID) + "," + str(conf) + "\n")
         print 'FOR ' + str(Lev) + ' COMPONENTS ID: ' + str(ID) + ' CONFIDENT: ' + str(conf)
         Lev = Lev + 1
-    plt.subplot(1, 2, 1)
+
+    fig = plt.gcf()
+    fig.canvas.set_window_title('RESULTS FOR FACE ' + str(face_number))
+
+    plt.subplot(2, 1, 1)
     plt.plot(eigen_ID)
     plt.title('ID against Number of Components', fontsize=10)
     plt.axis([0, Lev, 0, 25])
     plt.ylabel('ID', fontsize=8)
     plt.xlabel('Number of Components', fontsize=8)
-    plt.subplot(1, 2, 2)
+    plt.subplot(2, 1, 2)
     plt.plot(eigen_conf, 'red')
     plt.title('Confidence against Number of Components', fontsize=10)
     plt.ylabel('Confidence', fontsize=8)
     plt.xlabel('Number of Components', fontsize=8)
     plt.tight_layout()
+
+    print ' SHOW RESULTS FOR FACE ' + str(face_number)
+    cv2.imshow('FACE' + str(face_number), Face)
     plt.show()
+    face_number = face_number + 1
+
 
 Info.close()
 cv2.destroyAllWindows()
