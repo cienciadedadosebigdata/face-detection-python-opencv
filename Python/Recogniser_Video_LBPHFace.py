@@ -1,5 +1,7 @@
-# ------------ DITECTOR FOR THE LBPH FACE RECOGNISER
-# ------------ BY LAHIRU DINALANKARA AKA SPIKE
+#   --------------------------------- RECOGNISER FOR THE LBPH FACE RECOGNISER ------------------------------------------
+#   -------------------- FOR THE FACE RECOGNITION ALL THE FACES ARE REQUIRED TO BE SAME SIZE --------------------------
+# -------------------------------------- BY LAHIRU DINALANKARA AKA SPIKE ----------------------------------------------
+
 
 
 import cv2                  # Importing the opencv

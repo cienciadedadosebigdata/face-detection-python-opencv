@@ -42,7 +42,7 @@ for (x, y, w, h) in faces:
     Lev = 1
     eigen_ID = []
     eigen_conf = []
-    for _ in range(2):
+    for _ in range(200):
         recog = cv2.face.createEigenFaceRecognizer(Lev)     # creating EIGEN FACE RECOGNISER 
         print('TRAINING FOR  ' + str(Lev) + ' COMPONENTS')
         recog .train(FaceList, IDs)                         # The recongniser is trained using the images
@@ -53,24 +53,26 @@ for (x, y, w, h) in faces:
         Info.write(str(ID) + "," + str(conf) + "\n")
         print 'FOR ' + str(Lev) + ' COMPONENTS ID: ' + str(ID) + ' CONFIDENT: ' + str(conf)
         Lev = Lev + 1
-
+    # ---------------------------------------- 1ST PLOT -----------------------------------------------------
     fig = plt.gcf()
     fig.canvas.set_window_title('RESULTS FOR FACE ' + str(face_number))
-
     plt.subplot(2, 1, 1)
     plt.plot(eigen_ID)
     plt.title('ID against Number of Components', fontsize=10)
     plt.axis([0, Lev, 0, 25])
     plt.ylabel('ID', fontsize=8)
     plt.xlabel('Number of Components', fontsize=8)
-    plt.subplot(2, 1, 2)
+    p2 = plt.subplot(2, 1, 2)
     plt.plot(eigen_conf, 'red')
     plt.title('Confidence against Number of Components', fontsize=10)
+    p2.set_xlim(xmin=0)
+    p2.set_xlim(xmax=Lev)
     plt.ylabel('Confidence', fontsize=8)
     plt.xlabel('Number of Components', fontsize=8)
     plt.tight_layout()
 
     print ' SHOW RESULTS FOR FACE ' + str(face_number)
+    NameFind.tell_time_passed()                                  # TIME PASSED
     cv2.imshow('FACE' + str(face_number), Face)
     plt.show()
     face_number = face_number + 1

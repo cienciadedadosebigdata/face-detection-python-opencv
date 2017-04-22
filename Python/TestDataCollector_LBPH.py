@@ -12,7 +12,7 @@ import NameFind
 face_cascade = cv2.CascadeClassifier('Haar/haarcascade_frontalcatface.xml')
 path = 'dataSet'                                                # path to the photos
 
-img = cv2.imread('Seb.jpg')        # -------------->>>>>>>>>>>>>>>>>>  The Image to be checked
+img = cv2.imread('Me4.jpg')        # -------------->>>>>>>>>>>>>>>>>>  The Image to be checked
 
 def getImageWithID(path):
     imagePaths = [os.path.join(path, f) for f in os.listdir(path)]
@@ -56,20 +56,24 @@ for (x, y, w, h) in faces:
         radTrain.write(str(ID) + "," + str(conf) + "\n")
         print ("FOR RADIUS: " + str(radPix) + " ID IS: " + str(ID) + " THE CONFIDENCE: " + str(conf))
         radPix = radPix + 1
-
-    plt.subplot(3, 2, 1)
+    # ---------------------------------------- 1ST PLOT -----------------------------------------------------
+    plt.subplot(2, 1, 1)
     plt.plot(rad_tabal_ID)
     plt.title('ID against Pixel Radius', fontsize=10)
-    plt.axis([0, 53, 0, 25])
+    plt.axis([0, radPix, 0, 25])
     plt.ylabel('ID', fontsize=8)
     plt.xlabel('Radius (Pixels)', fontsize=8)
-    plt.subplot(3, 2, 2)
+    p2 = plt.subplot(2, 1, 2)
     plt.plot(rad_tabal_conf, 'red')
     plt.title('Confidence against Pixel Radius', fontsize=10)
+    p2.set_xlim(xmin=0)
+    p2.set_xlim(xmax=radPix)
     plt.ylabel('Confidence', fontsize=8)
     plt.xlabel('Radius (Pixels)', fontsize=8)
+    plt.tight_layout()
+    plt.show()
     # ---------------------------  Run tests for the neighbours -----------------------------
-    radPixel = 2    # ------>> CHANGE THE PIXEL RADIUS IF A BETTER VALUE IS FOUND
+    radPixel = input('ENTER THE IDEAL PIXEL RADIUS ')    # ------>> CHANGE THE PIXEL RADIUS IF A BETTER VALUE IS FOUND
     neighbour = 1
     nei_ID = []
     nei_conf = []
@@ -84,21 +88,24 @@ for (x, y, w, h) in faces:
         neiTrain.write(str(ID) + "," + str(conf) + '\n')
         print ('FOR RADIUS: ' + str(radPixel) + " AND " + str(neighbour) + "NEIGHBOURS, ID IS: " + str(ID) + " THE CONFIDENCE: " + str(conf))
         neighbour = neighbour + 1
-    fig = plt.gcf()
-    fig.canvas.set_window_title('RESULTS FOR FACE ' + str(face_number))
-    plt.subplot(3, 2, 3)
+    # ---------------------------------------- 2ND PLOT -----------------------------------------------------
+    plt.subplot(2, 1, 1)
     plt.plot(nei_ID)
     plt.title('ID against number of neighbours', fontsize=10)
-    plt.axis([0, 12, 10, 25])
+    plt.axis([0, neighbour, 10, 25])
     plt.ylabel('ID', fontsize=8)
     plt.xlabel('Number of neighbours', fontsize=8)
-    plt.subplot(3, 2, 4)
+    p2 = plt.subplot(2, 1, 2)
     plt.plot(nei_conf, 'red')
     plt.title('ID against number of neighbours', fontsize=10)
+    p2.set_xlim(xmin=0)
+    p2.set_xlim(xmax=neighbour)
     plt.ylabel('Confidence', fontsize=8)
     plt.xlabel('Number of neighbours', fontsize=8)
+    plt.tight_layout()
+    plt.show()
     # ---------------------------  Run tests for the Cell Number -----------------------------
-    neighbour = 2   # ------>> CHANGE THE NEIGHBOUR IF BETTER VALUE IS FOUND
+    neighbour = input('ENTER THE IDEAL NUMBER OF NEIGHBOURS ')   # ------>> CHANGE THE NEIGHBOUR IF BETTER VALUE IS FOUND
     cellVal = 1
     cell_ID = []
     cell_conf = []
@@ -113,6 +120,32 @@ for (x, y, w, h) in faces:
         cellTrain.write(str(ID) + "," + str(conf) + "\n")
         print ('FOR RADIUS: ' + str(radPixel) + " , " + str(neighbour) + "NEIGHBOURS AND CELL VALUE " + str(cellVal) + ", ID IS: " + str(ID) + " THE CONFIDENCE: " + str(conf))
         cellVal = cellVal + 1
+    NameFind.tell_time_passed()
+
+
+    # ------------------------------------------- ALL SIX PLOTS -----------------------------------------------------------
+    plt.subplot(3, 2, 1)
+    plt.plot(rad_tabal_ID)
+    plt.title('ID against Pixel Radius', fontsize=10)
+    plt.axis([0, 53, 0, 25])
+    plt.ylabel('ID', fontsize=8)
+    plt.xlabel('Radius (Pixels)', fontsize=8)
+    plt.subplot(3, 2, 2)
+    plt.plot(rad_tabal_conf, 'red')
+    plt.title('Confidence against Pixel Radius', fontsize=10)
+    plt.ylabel('Confidence', fontsize=8)
+    plt.xlabel('Radius (Pixels)', fontsize=8)
+    plt.subplot(3, 2, 3)
+    plt.plot(nei_ID)
+    plt.title('ID against number of neighbours', fontsize=10)
+    plt.axis([0, 12, 10, 25])
+    plt.ylabel('ID', fontsize=8)
+    plt.xlabel('Number of neighbours', fontsize=8)
+    plt.subplot(3, 2, 4)
+    plt.plot(nei_conf, 'red')
+    plt.title('ID against number of neighbours', fontsize=10)
+    plt.ylabel('Confidence', fontsize=8)
+    plt.xlabel('Number of neighbours', fontsize=8)
     plt.subplot(3, 2, 5)
     plt.plot(cell_ID)
     plt.title('ID against number of cells', fontsize=10)
@@ -125,9 +158,8 @@ for (x, y, w, h) in faces:
     plt.ylabel('Confidence', fontsize=8)
     plt.xlabel('Number of Cells', fontsize=8)
     plt.tight_layout()
-    print ' SHOW RESULTS FOR FACE ' + str(face_number)
-    cv2.imshow('FACE' + str(face_number), Face)
     plt.show()
+
     face_number = face_number + 1
 
 radTrain.close()

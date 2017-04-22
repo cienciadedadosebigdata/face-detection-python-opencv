@@ -2,6 +2,9 @@
 
 import cv2
 import math
+import  time
+
+now_time = time.clock()
 
 face = cv2.CascadeClassifier('Haar/haarcascade_frontalcatface.xml')
 glass_cas = cv2.CascadeClassifier('Haar/haarcascade_eye_tree_eyeglasses.xml')
@@ -157,3 +160,6 @@ def DetectEyes(Image):
                     CroppedFace = Image[FaceY: FaceY + FaceHeight, FaceX: FaceX + FaceWidth]
                     return CroppedFace
 
+
+def tell_time_passed():
+    print 'TIME PASSED ' + str(round(((time.clock() - now_time)/60), 2)) + ' MINS'

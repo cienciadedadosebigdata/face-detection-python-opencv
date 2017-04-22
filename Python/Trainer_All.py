@@ -7,8 +7,8 @@ import numpy as np                                      # importing Numpy librar
 from PIL import Image                                   # importing Image library
 
 EigenFace = cv2.face.createEigenFaceRecognizer(15)      # creating EIGEN FACE RECOGNISER
-FisherFace = cv2.face.createFisherFaceRecognizer(5)     # Create FISHER FACE RECOGNISER
-LBPHFace = cv2.face.createLBPHFaceRecognizer(2, 2, 7,7) # Create LBPH FACE RECOGNISER
+FisherFace = cv2.face.createFisherFaceRecognizer(2)     # Create FISHER FACE RECOGNISER
+LBPHFace = cv2.face.createLBPHFaceRecognizer(1, 1, 7,7) # Create LBPH FACE RECOGNISER
 
 path = 'dataSet'                                        # path to the photos
 def getImageWithID (path):

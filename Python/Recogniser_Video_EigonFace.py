@@ -1,10 +1,9 @@
-#   --------------------------------- DITECTOR FOR THE EIGEN FACE RECOGNISER ------------------------------------------
+#   --------------------------------- RECOGNISER FOR THE EIGEN FACE RECOGNISER ------------------------------------------
 #   -------------------- FOR THE FACE RECOGNITION ALL THE FACES ARE REQUIRED TO BE SAME SIZE --------------------------
 # -------------------------------------- BY LAHIRU DINALANKARA AKA SPIKE ----------------------------------------------
 
 
-import cv2                  #   Importing the opencv
-import numpy as np          #   Import Numarical Python
+import cv2                                                                      # Importing the opencv
 import NameFind
 
 #   import the Haar cascades for face and eye ditection

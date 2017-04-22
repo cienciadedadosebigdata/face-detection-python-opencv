@@ -9,9 +9,11 @@ import numpy as np                                      # importing Numpy librar
 from PIL import Image                                   # importing Image library
 import matplotlib.pyplot as plt
 
+import NameFind
+
 face_cascade = cv2.CascadeClassifier('Haar/haarcascade_frontalcatface.xml')
 path = 'dataSet'                                        # path to the photos
-img = cv2.imread('Me4.jpg')
+img = cv2.imread('Sam2.jpg')
 
 def getImageWithID (path):
     imagePaths = [os.path.join(path, f) for f in os.listdir(path)]
@@ -59,19 +61,22 @@ for (x, y, w, h) in faces:
 
     fig = plt.gcf()
     fig.canvas.set_window_title('RESULTS FOR FACE ' + str(face_number))
-    plt.subplot(1, 2, 1)
+    plt.subplot(2, 1, 1)
     plt.plot(fish_ID)
     plt.title('ID against Number of Components', fontsize=10)
     plt.axis([0, Lev, 0, 25])
     plt.ylabel('ID', fontsize=8)
     plt.xlabel('Number of Components', fontsize=8)
-    plt.subplot(1, 2, 2)
+    p2 = plt.subplot(2, 1, 2)
     plt.plot(fish_conf, 'red')
     plt.title('Confidence against Number of Components', fontsize=10)
+    p2.set_xlim(xmin=0)
+    p2.set_xlim(xmax=Lev)
     plt.ylabel('Confidence', fontsize=8)
     plt.xlabel('Number of Components', fontsize=8)
     plt.tight_layout()
     print ' SHOW RESULTS FOR FACE ' + str(face_number)
+    NameFind.tell_time_passed()
     cv2.imshow('FACE' + str(face_number), Face)
     plt.show()
     face_number = face_number + 1
